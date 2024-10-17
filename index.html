@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Stella's Stuff</title>
+    <title>Sigma Files</title>
     <style>
         body {
             background-size: cover;
@@ -16,14 +16,19 @@
             transition: background-image 1s ease-in-out;
         }
 
-        header, section, footer {
+        header {
             padding: 20px;
             color: white;
+            display: flex; /* Enable flexbox */
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center text */
         }
 
-        .container {
-            width: auto;
-            box-sizing: border-box;
+        h1 {
+            color: black; /* Change the color to black */
+            margin: 0; /* Remove default margin */
+            padding: 20px; /* Optional: Add some padding */
         }
 
         .link-container, .details-container, .heading-container {
@@ -108,13 +113,13 @@
 <body>
     <header>
         <h1>Download Files Below</h1>
-        <div class="made-by-container container">
-        </div>
+        <div class="made-by-container container"></div>
         <div class="link-container container">
             <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/app.asar" class="rounded-button">ASAR</a>
             <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/ProcessHacker.exe" class="rounded-button">PH</a>
             <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/UwUTools.exe" class="rounded-button">UwUTools</a>
-            <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/saucecpp.exe" class="rounded-button">SauceLab</a> <br>
+            <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/saucecpp.exe" class="rounded-button">SauceLab</a>
+            <br>
             <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/UadSol.exe" class="centered-green-button rounded-button">UadSol</a>
         </div>
     </header>
