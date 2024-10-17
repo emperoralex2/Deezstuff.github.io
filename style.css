@@ -1,0 +1,43 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, section, footer {
+    margin: 20px;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+section {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.rounded-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 30px;
+    background-color: #4CAF50; /* Green */
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.rounded-button:hover {
+    background-color: #45a049; /* Darker Green */
+}
