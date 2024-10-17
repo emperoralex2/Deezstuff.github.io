@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Stella's Stuff</title>
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            transition: background-image 1s ease-in-out;
+        }
+
+        header, section, footer {
+            padding: 20px;
+            color: white;
+        }
+
+        .container {
+            width: auto;
+            box-sizing: border-box;
+        }
+
+        .link-container, .details-container, .heading-container {
+            display: block;
+            background-color: rgba(40, 40, 100, 0.2);
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 600px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .made-by-container {
+            position: fixed;
+            bottom: 10px;
+            left: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .details-container p, .link-container a, .heading-container p {
+            font-weight: bold;
+            color: white;
+        }
+
+        .rounded-button, .centered-green-button {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .rounded-button {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .centered-green-button {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .gif-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 999;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const backgroundImageUrls = [
+                'https://images.wallpaperscraft.com/image/single/milky_way_night_lake_969456_3840x2400.jpg',
+                'https://images.wallpaperscraft.com/image/single/starry_sky_stars_night_1015889_3840x2400.jpg',
+                'https://images.wallpaperscraft.com/image/single/milky_way_sea_night_1065595_3840x2400.jpg',
+                'https://images.wallpaperscraft.com/image/single/starry_sky_night_trees_972652_3840x2400.jpg',
+                'https://images.wallpaperscraft.com/image/single/stars_milky_way_night_945305_3840x2400.jpg',
+            ];
+
+            let currentBackgroundIndex = 0;
+            let imageObjects = [];
+
+            function preloadImages() {
+                for (let i = 0; i < backgroundImageUrls.length; i++) {
+                    const img = new Image();
+                    img.src = backgroundImageUrls[i];
+                    imageObjects.push(img);
+                }
+            }
+
+            function updateBackgroundImage() {
+                document.body.style.backgroundImage = `url('${backgroundImageUrls[currentBackgroundIndex]}')`;
+                currentBackgroundIndex = (currentBackgroundIndex + 1) % backgroundImageUrls.length;
+            }
+
+            preloadImages();
+            updateBackgroundImage();
+
+            setInterval(updateBackgroundImage, 30000);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="made-by-container container">
+            <p>no</p>
+        </div>
+        <div class="link-container container">
+            <a href="#" class="rounded-button">CMD</a>
+            <a href="#" class="rounded-button">Arcade</a>
+            <a href="#" class="rounded-button">VDF Darwin</a> <br>
+            <a href="#" class="centered-green-button rounded-button">Other Button</a>
+        </div>
+        <div class="heading-container container">
+            <p>no</p>
+        </div>
+        <div class="gif-container">
+            <img src="https://cdn.discordapp.com/attachments/1172464149071147078/1192080363820945468/3dgifmaker48556.gif" alt="GIF" style="width: 200px; height: auto;">
+        </div>
+    </header>
+    <footer></footer>
+</body>
+</html>
