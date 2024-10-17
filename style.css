@@ -13,11 +13,13 @@ header, section, footer {
 header {
     background-color: #333;
     color: #fff;
-    text-align: center;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
 }
 
 h1 {
-    text-align: center; /* Center the heading */
     color: black; /* Change the color to black */
     margin: 0; /* Remove default margin */
     padding: 20px; /* Optional: Add some padding */
