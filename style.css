@@ -16,6 +16,13 @@ header {
     text-align: center;
 }
 
+h1 {
+    text-align: center; /* Center the heading */
+    color: black; /* Change the color to black */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Optional: Add some padding */
+}
+
 section {
     text-align: center;
 }
