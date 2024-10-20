@@ -24,24 +24,83 @@ header {
 
 /* Container for the download buttons */
 .link-container {
-    background-color: rgba(40, 40, 100, 0.2);
+    background-color: rgba(39, 39, 98, 0.2);
     border-radius: 10px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 600px;
+    max-height: 800px;
+    min-height: 180px;
+    max-width: 800px;
+    min-width: 270px;
     padding: 30px;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.4s ease, opacity 0.4s ease, height 0.4s ease, width 0.4s ease;
+    opacity: 1;
+}
+
+
+.link-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.scale-up-center {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-down-center {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes scale-down-center {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+
+.scale-down-center {
+    -webkit-animation: scale-down-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-down-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 /* Center the header text */
 h1 {
     color: #2980b9;
     text-shadow: 
-        1px 1px 0 rgb(0, 0, 0, 0.7), 
-        -1px -1px 0 rgb(0, 0, 0, 0.7),
-        1px -1px 0 rgba(0, 0, 0, 0.7),
-        -1px 1px 0 rgba(0, 0, 0, 0.7);
+        1px 1px 0 rgb(4, 0, 255, 0.7), 
+        -1px -1px 0 rgb(25, 42, 174, 0.7),
+        1px -1px 0 rgb(12, 28, 151, 0.7),
+        -1px 1px 0 rgb(10, 15, 148, 0.7);
     margin: 0; 
     padding: 20px; 
     font-size: 24px; 
