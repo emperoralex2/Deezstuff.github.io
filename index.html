@@ -3,121 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <title>Sigma Files</title>
-    <style>
-        body {
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            transition: background-image 1s ease-in-out;
-        }
-
-        header {
-            padding: 20px;
-            color: white;
-            text-align: center; /* Center text in header */
-        }
-
-        .link-container {
-            display: block;
-            background-color: rgba(40, 40, 100, 0.2);
-            border-radius: 10px;
-            margin-top: 20px;
-            margin-right: auto;
-            margin-left: auto;
-            max-width: 600px;
-            padding: 15px;
-            text-align: center;
-        }
-
-        h1 {
-            color: black; /* Change the color to black */
-            margin: 0; /* Remove default margin */
-            padding: 20px; /* Add some padding */
-            font-size: 24px; /* Set a good font size */
-            font-weight: bold; /* Make it bold */
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Optional: Add a shadow for better visibility */
-        }
-
-        .made-by-container {
-            position: fixed;
-            bottom: 10px;
-            left: 20px;
-            font-weight: bold;
-            color: white;
-        }
-
-        .rounded-button, .centered-green-button {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold; /* Make buttons bold */
-        }
-
-        .rounded-button {
-            background-color: #3498db; /* Light blue */
-        }
-
-        .centered-green-button {
-            background-color: #2ecc71; /* Green */
-        }
-
-        .gif-container {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            z-index: 999;
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const backgroundImageUrls = [
-                'https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/miles2.jpeg',
-            ];
-
-            let currentBackgroundIndex = 0;
-            let imageObjects = [];
-
-            function preloadImages() {
-                for (let i = 0; i < backgroundImageUrls.length; i++) {
-                    const img = new Image();
-                    img.src = backgroundImageUrls[i];
-                    imageObjects.push(img);
-                }
-            }
-
-            function updateBackgroundImage() {
-                document.body.style.backgroundImage = `url('${backgroundImageUrls[currentBackgroundIndex]}')`;
-                currentBackgroundIndex = (currentBackgroundIndex + 1) % backgroundImageUrls.length;
-            }
-
-            preloadImages();
-            updateBackgroundImage();
-
-            setInterval(updateBackgroundImage, 30000);
-        });
-    </script>
+    <script src="script.js" defer></script> <!-- Added defer to ensure the script loads after HTML -->
 </head>
 <body>
     <header>
         <div class="link-container">
-            <h1>Download Files Below</h1>
-            <div class="made-by-container"></div>
-            <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/app.asar" class="rounded-button">ASAR</a>
-            <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/ProcessHacker.exe" class="rounded-button">PH</a>
-            <a href="https://github.com/dpadGuy/UwUTools_Binaries/releases/download/UwUToolsBinaries/UwUTools.exe" class="rounded-button">UwUTools</a>
-            <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/saucecpp.exe" class="rounded-button">SauceLab</a>
-            <br>
-            <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/AnyDesk.exe" class="rounded-button">AnyDesk</a>
-            <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/WinXShell.zip" class="rounded-button">WinXShell</a>
-            <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/UadSol.exe" class="centered-blue-button rounded-button">UadSol</a>
+            <h1>Download Files</h1>
+            <button id="show-more" class="rounded-button">Show More</button>
+            <div id="extra-buttons" class="hidden">
+                <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/app.asar" class="rounded-button">ASAR</a>
+                <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/ProcessHacker.exe" class="rounded-button">PH</a>
+                <a href="https://github.com/dpadGuy/UwUTools_Binaries/releases/download/UwUToolsBinaries/UwUTools.exe" class="rounded-button">UwUTools</a>
+                <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/saucecpp.exe" class="rounded-button">SauceLab</a>
+                <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/AnyDesk.exe" class="rounded-button">AnyDesk</a>
+                <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/WinXShell.zip" class="rounded-button">WinXShell</a>
+                <a href="https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/UadSol.exe" class="rounded-button">UadSol</a>
+            </div>
         </div>
     </header>
     <footer></footer>
