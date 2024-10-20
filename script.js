@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleButton.addEventListener('click', function () {
         linkContainer.classList.remove('scale-up-center', 'scale-down-center');
         extraButtons.classList.remove('scale-up-center', 'scale-down-center');
-        
+
         if (extraButtons.style.display === 'none') {
             extraButtons.style.display = 'block';
             linkContainer.classList.add('scale-up-center');
@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 linkContainer.classList.remove('scale-up-center');
                 extraButtons.classList.remove('scale-up-center');
             }, { once: true });
+            toggleButton.textContent = 'Show Less';
         } else {
             extraButtons.classList.add('scale-up-center');
             linkContainer.classList.add('scale-down-center');
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             extraButtons.classList.remove('scale-down-center');
             }, { once: true });
             toggleButton.textContent = 'Show More';
-            
+
         }
     });
 
