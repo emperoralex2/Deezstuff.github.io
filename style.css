@@ -135,11 +135,3 @@ h1 {
     display: none;
 }
 
-/* Center footer */
-footer {
-    text-align: center;
-    background-color: #2980b9;
-    color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-}
