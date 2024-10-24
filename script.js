@@ -1,51 +1,136 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Toggle visibility of the additional buttons
-    const toggleButton = document.getElementById('show-more');
-    const extraButtons = document.getElementById('extra-buttons');
-    const linkContainer = document.querySelector('.link-container');
+    const menuButton = document.getElementById('Menu');
+    const hideButton = document.getElementById('Hide');
+    const box5 = document.getElementById('box5');
 
-    // Hide the extra buttons on load
-    extraButtons.style.display = 'none';
+    menuButton.addEventListener('click', function () {
 
-    toggleButton.addEventListener('click', function () {
-        linkContainer.classList.remove('scale-up-center', 'scale-down-center');
-        extraButtons.classList.remove('scale-up-center', 'scale-down-center');
+        box5.classList.remove('scale-in-center', 'scale-out-center');
 
-        if (extraButtons.style.display === 'none') {
-            extraButtons.style.display = 'block';
-            linkContainer.classList.add('scale-up-center');
-            extraButtons.classList.add('scale-up-center');
-            linkContainer.addEventListener('animationend', function () {
-                linkContainer.classList.remove('scale-up-center');
-                extraButtons.classList.remove('scale-up-center');
+        if (box5.style.display !== 'none') {
+            box5.style.display = 'block'; 
+            box5.classList.add('scale-in-center'); 
+            box5.addEventListener('animationend', function () {
+                box5.classList.remove('scale-in-center'); 
             }, { once: true });
-            toggleButton.textContent = 'Show Less';
         } else {
-            extraButtons.classList.add('scale-up-center');
-            linkContainer.classList.add('scale-down-center');
-            extraButtons.classList.add('scale-down-center');
-            extraButtons.addEventListener('animationend', function() {
-            extraButtons.style.display = 'none'; 
-            linkContainer.classList.remove('scale-down-center');
-            extraButtons.classList.remove('scale-down-center');
+            box5.classList.add('scale-out-center'); 
+            box5.addEventListener('animationend', function () {
+                box5.style.display = 'none'; 
+                box5.classList.remove('scale-out-center'); 
             }, { once: true });
-            toggleButton.textContent = 'Show More';
-
         }
     });
 
-    // Background image setup (optional)
-    const backgroundImageUrls = [
-        'https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/miles2.jpeg',
-    ];
+    hideButton.addEventListener('click', function () {
 
-    let currentBackgroundIndex = 0;
-
-    function updateBackgroundImage() {
-        document.body.style.backgroundImage = `url('${backgroundImageUrls[currentBackgroundIndex]}')`;
-        currentBackgroundIndex = (currentBackgroundIndex + 1) % backgroundImageUrls.length;
-    }
-
-    updateBackgroundImage();
-    setInterval(updateBackgroundImage, 30000); // Change background every 30 seconds
+        box5.classList.remove('scale-in-center', 'scale-out-center');
+        if (box5.style.display !== 'none') {
+            box5.classList.add('scale-out-center'); 
+            box5.style.display = 'none';
+            box5.addEventListener('animationend', function () {
+                box5.classList.remove('scale-out-center'); 
+            }, { once: true });
+        
+        }
+    });
 });
+
+
+document.getElementById('goButton').addEventListener('click', function() {
+ 
+    const userUrl = document.getElementById("userUrl").value;
+
+    if (userUrl) {
+      
+        window.location.href = userUrl;
+    } else {
+
+        alert("Please enter a valid URL.");
+    }
+});
+
+function hidebutton() {
+    const box2 = document.getElementById('box2');
+    const urlheader = document.getElementById('urlheader');
+    const hide = document.getElementById('Hide');
+    const box = document.getElementById('box5');
+    const Menu = document.getElementById('Menu');
+    const showmore = document.getElementById('animateButton');
+    const githublogo = document.getElementById('githublogos');
+
+    if (Menu.style.display !== 'none') {
+        Menu.style.display ='none'
+        box2.style.display ='none'
+        showmore.style.display ='none'
+        githublogo.style.display ='none'
+        box.style.display ='block'
+        urlheader.style.display ='none'
+    } else {
+        Menu.style.display ='block'
+        box.style.display ='none'
+        box2.style.display ='block'
+        showmore.style.display ='block'
+        githublogo.style.display ='block'
+        urlheader.style.display ='block'
+    }
+}
+
+function unhidebutton() {
+    hidebutton();
+}
+
+
+
+
+document.getElementById('animateButton').addEventListener('click', function() {
+    const animatedElement = document.getElementById('animatedElement');
+    const newContent = document.getElementById('newContent');
+
+    if (newContent.style.display === 'block') {
+        newContent.classList.add('slide-in-bck-br');
+        newContent.addEventListener('animationend', () => {
+            newContent.classList.remove('slide-in-bck-br');
+        }, { once: true });
+    } else {
+        if (newContent.style.display === 'none') {}
+        newContent.classList.remove('slide-out-bck-br');
+        newContent.classList.add('slide-out-bck-br');
+        newContent.addEventListener('animationend', () => {
+            newContent.classList.remove('slide-out-bck-br'); 
+        }, { once: true });
+    }
+});
+
+function hideContent() {
+    const originalContent = document.getElementById('boxContainer');
+    const newContent = document.getElementById('newContent');
+    const toggleButton = document.getElementById('toggleButton');
+    const showOriginalButton = document.getElementById('showOriginalButton');
+    const centerContainer = document.getElementById('CenterContainer'); 
+
+    if (originalContent.style.display !== 'none') {
+        centerContainer.style.display = 'none';
+        originalContent.style.display = 'none'; 
+        newContent.style.display = 'block'; 
+        toggleButton.style.display = 'none'; 
+        showOriginalButton.style.display = 'block'; 
+    } else {
+        centerContainer.style.display = 'block';
+        originalContent.style.display = 'block'; 
+        newContent.style.display = 'none'; 
+        toggleButton.style.display = 'block'; 
+        showOriginalButton.style.display = 'none';
+    }
+}
+
+function showOriginalContent() {
+    hideContent(); 
+}
+
+window.onload = function() {
+    document.body.style.backgroundImage = "url('https://github.com/emperoralex2/Deezstuff.github.io/releases/download/%23files/miles2.jpeg')";
+    document.body.style.backgroundSize = "cover";  
+    document.body.style.backgroundPosition = "center"; 
+    document.body.style.backgroundRepeat = "no-repeat"; 
+};
