@@ -506,3 +506,32 @@ right: 170;
     top: 90;
     right: 170;
 }
+
+.movie {
+    display: flex;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #07a5e8;
+    color: white;
+    font-weight: bold;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 1;
+    min-width: 100px;
+    min-height: 22px;
+    position: absolute;
+    top: 700;
+    right: 635;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.movie:hover {
+    background-color: #0b9ad8;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
