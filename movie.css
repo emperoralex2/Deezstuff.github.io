@@ -135,3 +135,19 @@
     height: 40px;
     width: 40px;
 }
+
+.select {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    top: 100;
+    left: 620;
+    width: 200px;
+    height: 30px;
+
+}
