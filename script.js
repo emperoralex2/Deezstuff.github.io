@@ -115,10 +115,12 @@ function hidebutton() {
     const Menu = document.getElementById('Menu');
     const showmore = document.getElementById('animateButton');
     const githublogo = document.getElementById('githublogos');
+    const movie = document.getElementById('movie');
 
     if (Menu.style.display !== 'none') {
         Menu.style.display ='none'
         box2.style.display ='none'
+        movie.style.display ='none'
         showmore.style.display ='none'
         githublogo.style.display ='none'
         box.style.display ='block'
@@ -127,6 +129,7 @@ function hidebutton() {
         Menu.style.display ='block'
         box.style.display ='none'
         box2.style.display ='block'
+        movie.style.display ='block'
         showmore.style.display ='block'
         githublogo.style.display ='block'
         urlheader.style.display ='block'
@@ -169,10 +172,12 @@ function hideContent() {
     const showOriginalButton = document.getElementById('showOriginalButton');
     const centerContainer = document.getElementById('CenterContainer'); 
     const box6 = document.getElementById('box6'); 
+    const movie = document.getElementById('movie');
 
     if (originalContent.style.display !== 'none') {
         centerContainer.style.display = 'none';
         originalContent.style.display = 'none'; 
+        movie.style.display ='none'
         newContent.style.display = 'block'; 
         box6.style.display = 'block';
         toggleButton.style.display = 'none'; 
@@ -182,6 +187,7 @@ function hideContent() {
         originalContent.style.display = 'block'; 
         newContent.style.display = 'none'; 
         box6.style.display = 'none';
+        movie.style.display = 'block'
         toggleButton.style.display = 'block'; 
         showOriginalButton.style.display = 'none';
     }
