@@ -177,7 +177,7 @@ function hideContent() {
     if (originalContent.style.display !== 'none') {
         centerContainer.style.display = 'none';
         originalContent.style.display = 'none'; 
-        movie.style.display ='none'
+        movie.style.display = 'none'
         newContent.style.display = 'block'; 
         box6.style.display = 'block';
         toggleButton.style.display = 'none'; 
